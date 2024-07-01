@@ -35,7 +35,7 @@ class TelegramConfig(MutableMapping[_KT, _VT]):
                                                       Path.home() / "downloads")),
             "gdrive_folder_id": os.environ.get("G_DRIVE_FOLDER_ID","testing"),
             "gdrive_index_link": os.environ.get("G_DRIVE_INDEX_LINK","testing"),
-            "gdrive_secret": json.loads(os.environ.get("G_DRIVE_SECRET", default_gdrive_secret)),
+            "gdrive_secret": os.environ.get("G_DRIVE_SECRET", default_gdrive_secret),
             "owner_id": os.environ.get("OWNER_ID","1913299756"),
         }
 
