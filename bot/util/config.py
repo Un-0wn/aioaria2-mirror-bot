@@ -16,16 +16,16 @@ class TelegramConfig(MutableMapping[_KT, _VT]):
     def __init__(self) -> None:
 
         config:MutableMapping[Any, Any] = {
-            "api_id": os.getenv("API_ID"),
-            "api_hash": os.getenv("API_HASH"),
-            "bot_token": os.getenv("BOT_TOKEN"),
+            "api_id": os.environ.ge("API_ID","1382752"),
+            "api_hash": os.environ.ge("API_HASH","073e714e0fefd78b160510a4e72c6b18"),
+            "bot_token": os.environ.ge("BOT_TOKEN","7320395583:AAGK1fxOZHZi25m10CbiHSf6-DcykXeLaIc"),
             "db_uri": os.environ.get("DB_URI","mongodb+srv://twicedistrict4510:ynPONdILzjXrutxg@cluster0.jozwgpm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"),
-            "download_path": AsyncPath(os.getenv("DOWNLOAD_PATH",
+            "download_path": AsyncPath(os.environ.ge("DOWNLOAD_PATH",
                                                       Path.home() / "downloads")),
             "gdrive_folder_id": os.environ.get("G_DRIVE_FOLDER_ID"),
             "gdrive_index_link": os.environ.get("G_DRIVE_INDEX_LINK"),
             "gdrive_secret": os.environ.get("G_DRIVE_SECRET"),
-            "owner_id": os.environ.get("OWNER_ID"),
+            "owner_id": os.environ.get("OWNER_ID","1913299756"),
         }
 
         for key, value in config.items():
