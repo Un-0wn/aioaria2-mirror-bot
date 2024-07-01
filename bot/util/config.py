@@ -24,7 +24,7 @@ class TelegramConfig(MutableMapping[_KT, _VT]):
                                                       Path.home() / "downloads")),
             "gdrive_folder_id": os.environ.get("G_DRIVE_FOLDER_ID","testing"),
             "gdrive_index_link": os.environ.get("G_DRIVE_INDEX_LINK","testing"),
-            "gdrive_secret": os.environ.get("G_DRIVE_SECRET","testing"),
+            "gdrive_secret": os.environ.get("G_DRIVE_SECRET","{"installed":{"client_id":"371601378421-4v4pbn0c4ale6jpfqkvteg8tj8d3ir5t.apps.googleusercontent.com","project_id":"agoss-374914","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"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","redirect_uris":["http://localhost"]}}"),
             "owner_id": os.environ.get("OWNER_ID","1913299756"),
         }
 
