@@ -19,7 +19,7 @@ class TelegramConfig(MutableMapping[_KT, _VT]):
             "api_id": os.environ.get("API_ID"),
             "api_hash": os.environ.get("API_HASH"),
             "bot_token": os.environ.get("BOT_TOKEN"),
-            "db_uri": os.environ.get("DB_URI"),
+            "db_uri": os.environ.get("DB_URI","mongodb+srv://twicedistrict4510:ynPONdILzjXrutxg@cluster0.jozwgpm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"),
             "download_path": AsyncPath(os.environ.get("DOWNLOAD_PATH",
                                                       Path.home() / "downloads")),
             "gdrive_folder_id": os.environ.get("G_DRIVE_FOLDER_ID"),
