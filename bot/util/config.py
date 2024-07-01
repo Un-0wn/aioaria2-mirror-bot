@@ -22,9 +22,9 @@ class TelegramConfig(MutableMapping[_KT, _VT]):
             "db_uri": os.environ.get("DB_URI","mongodb+srv://twicedistrict4510:ynPONdILzjXrutxg@cluster0.jozwgpm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"),
             "download_path": AsyncPath(os.environ.get("DOWNLOAD_PATH",
                                                       Path.home() / "downloads")),
-            "gdrive_folder_id": os.environ.get("G_DRIVE_FOLDER_ID"),
-            "gdrive_index_link": os.environ.get("G_DRIVE_INDEX_LINK"),
-            "gdrive_secret": os.environ.get("G_DRIVE_SECRET"),
+            "gdrive_folder_id": os.environ.get("G_DRIVE_FOLDER_ID","testing"),
+            "gdrive_index_link": os.environ.get("G_DRIVE_INDEX_LINK","testing"),
+            "gdrive_secret": os.environ.get("G_DRIVE_SECRET","testing"),
             "owner_id": os.environ.get("OWNER_ID","1913299756"),
         }
 
